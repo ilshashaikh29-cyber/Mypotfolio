@@ -1,0 +1,341 @@
+/* ===== COLORS & FONTS ===== */
+:root {
+    --primary: #1D3557; /* Dark Blue */
+    --secondary: #39617a; /* Muted Blue */
+    --accent: #F1FAEE; /* Ivory White */
+    --highlight: #A8DADC; /* Soft Light Blue */
+    --background: #F8F9FA; /* Light Gray */
+    --text: #333333; /* Dark Text */
+    --light-text: #B0B0B0; /* Light Text */
+    --border: rgba(7, 7, 7, 0.1);
+}
+
+/* Global Reset & Centering */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 40px;
+    background: var(--primary);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    border-bottom: 2px solid var(--border);
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 20px;
+    margin: 0 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Elegant underline on hover */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--highlight);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--highlight);
+    color: var(--primary);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== LOGO HOVER ===== */
+.logo {
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--highlight);
+    transform: translateY(-4px);
+}
+
+/* ===== MAIN CONTAINER ===== */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px; /* Adjust for header */
+    padding: 0 20px;
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1)), url('path_to_your_image.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: var(--accent);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: translateY(-5px);
+    color: var(--highlight);
+}
+
+p {
+    font-size: 20px;
+    color: var(--text);
+}
+
+/* ===== ABOUT, SKILLS, PROJECTS, CONTACT SECTIONS ===== */
+section {
+    padding: 60px 20px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    background: var(--highlight);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.4s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+/* ===== SKILLS LIST ===== */
+.skils-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.skils-list li {
+    background: var(--secondary);
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: var(--accent);
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.skils-list li:hover {
+    background: var(--primary);
+    color: var(--highlight);
+    transform: translateY(-5px);
+}
+
+/* ===== PROJECT CARDS ===== */
+/* ===== PROJECT CARDS ===== */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: black; /* Set the font color of the text to black */
+    border: 1px solid transparent;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;  /* Heading font color black */
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: black;  /* Paragraph font color black */
+}
+
+/* Hover effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--highlight);
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* ===== BUTTON STYLING ===== */
+button {
+    background: var(--highlight);
+    color: var(--primary);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--primary);
+    color: var(--highlight);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FORM INPUT STYLING ===== */
+/* ===== CONTACT FORM ===== */
+#contact {
+    padding: 60px 20px;
+    background: var(--background);
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary); /* Heading color */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    background: var(--highlight);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.4s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+/* ===== FORM INPUTS ===== */
+.contact-form input,
+.contact-form textarea {
+    background: var(--secondary);
+    border: 1px solid #2C3E50;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: black;  /* Input text color set to black */
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* ===== BUTTON STYLING ===== */
+/* ===== BUTTON STYLING ===== */
+.contact-form button {
+    background: var(--highlight);
+    color: var(--primary);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect for "Send Message" button */
+.contact-form button:hover {
+    background: var(--primary);
+    color: var(--highlight);
+    transform: translateY(-3px);  /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Enhanced shadow */
+    transition: all 0.3s ease;
+}
+
+/* ===== FORM INPUT FOCUS EFFECT ===== */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--highlight);
+    box-shadow: 0 0 0 2px rgba(163, 194, 228, 0.3);
+    outline: none;
+}
