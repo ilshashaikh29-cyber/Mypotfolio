@@ -1,4 +1,4 @@
-final ======= :root {
+root {
   --bg-gradient: linear-gradient(135deg, #1A1A2E, #162447); /* deep charcoal gradient */
   --card-bg: #FFFFFF;           /* cards */
   --accent: #FF6B6B;            /* coral accent */
@@ -280,3 +280,4 @@ section {
     height: 140px;
   }
 }
+
