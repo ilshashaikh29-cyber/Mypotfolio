@@ -1,12 +1,13 @@
-root {
+:root {
   --bg-gradient: linear-gradient(135deg, #1A1A2E, #162447); /* deep charcoal gradient */
   --card-bg: #FFFFFF;           /* cards */
   --accent: #FF6B6B;            /* coral accent */
   --accent2: #FFD166;           /* gold accent */
-  --text: #F8F8F8;              /* main text */
-  --subtext: #B0B0B0;           /* muted text */
+  --text: #000000;              /* main text dark for visibility */
+  --subtext: #555555;           /* muted text */
 }
 
+/* ===== Global ===== */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ header {
 }
 
 nav a {
-  color: var(--text);
+  color: #fff; /* white text for header links */
   text-decoration: none;
   margin: 0 15px;
   font-weight: 500;
@@ -71,6 +72,7 @@ nav a:hover::after {
 
 /* ===== Hero Section ===== */
 #hero {
+  position: relative;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -78,6 +80,8 @@ nav a:hover::after {
   align-items: center;
   text-align: center;
   padding: 0 10%;
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
 }
 
 .profile-pic {
@@ -100,6 +104,7 @@ nav a:hover::after {
   font-size: 44px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #fff; /* visible on gradient background */
   opacity: 0;
   transform: translateY(25px);
   animation: fadeUp 0.8s ease forwards 0.2s;
@@ -107,7 +112,7 @@ nav a:hover::after {
 
 #hero p {
   font-size: 20px;
-  color: var(--subtext);
+  color: #eee;
   margin-bottom: 25px;
   opacity: 0;
   transform: translateY(25px);
@@ -119,7 +124,7 @@ nav a:hover::after {
   border-radius: 8px;
   border: none;
   background: var(--accent);
-  color: var(--text);
+  color: #fff;
   font-weight: 500;
   cursor: pointer;
   opacity: 0;
@@ -133,31 +138,19 @@ nav a:hover::after {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(255,107,107,0.4);
 }
-#hero {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 10%;
-  background-size: 600% 600%;
-  animation: gradientShift 20s ease infinite;
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* Fade Up Animation */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ===== Sections ===== */
@@ -174,49 +167,50 @@ section {
 }
 
 .card {
-  background: var(--card-bg); /* White/light card */
+  background: var(--card-bg);
   padding: 25px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  color: #000; /* default text black for readability */
+  color: #000;
 }
 
 .card h3,
 .card p {
-  color: #000; /* ensure text stays readable */
+  color: #000;
   transition: color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(255,107,107,0.25);
-  background: linear-gradient(135deg, #FF6B6B, #FFD166); /* gradient hover */
+  background: linear-gradient(135deg, #FF6B6B, #FFD166);
 }
 
 .card:hover h3,
 .card:hover p {
-  color: #fff; /* change text to white on hover for contrast */
+  color: #fff;
 }
+
 /* ===== Skills ===== */
-.skils-list li {
+.skills-list li {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
   border-radius: 20px;
   border: 1px solid var(--accent);
-  color: #000; /* default text dark */
+  color: #000;
   cursor: pointer;
   transition: 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-  background: #fff; /* light background */
+  background: #fff;
 }
 
-.skils-list li:hover {
-  background: linear-gradient(135deg, #FF6B6B, #FFD166); /* gradient hover */
-  color: #fff; /* text white for readability */
+.skills-list li:hover {
+  background: linear-gradient(135deg, #FF6B6B, #FFD166);
+  color: #fff;
   transform: translateY(-5px);
 }
 
-/* ===== Contact ===== */
+/* ===== Contact Form ===== */
 .contact-form {
   max-width: 500px;
   margin: auto;
@@ -231,7 +225,7 @@ section {
   border: 1px solid #d1d5db;
   outline: none;
   background: #fff;
-  color: var(--text);
+  color: #000; /* dark text for visibility */
   transition: 0.3s ease, transform 0.2s ease;
 }
 
@@ -280,4 +274,3 @@ section {
     height: 140px;
   }
 }
-
