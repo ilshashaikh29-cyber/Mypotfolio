@@ -165,7 +165,6 @@ h2:hover::after {
 }
 
 /* ===== SKILLS LIST ===== */
-/* SKILLS */
 .skils-list {
     list-style: none;
     display: flex;
@@ -191,8 +190,6 @@ h2:hover::after {
     transform: translateY(-5px);
 }
 
-
-
 /* ===== PROJECT CARDS ===== */
 /* ===== PROJECT CARDS ===== */
 .project-grid {
@@ -203,35 +200,35 @@ h2:hover::after {
 }
 
 .card {
-    background: #ffffff; 
+    background: var(--secondary);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 10px;
     width: 250px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    color: black;
-    border: 1px solid rgba(0,0,0,0.05);
+    color: black; /* Set the font color of the text to black */
+    border: 1px solid transparent;
 }
 
 .card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--primary);  /* Heading font color black */
+    color: black;  /* Heading font color black */
     margin-bottom: 10px;
 }
 
 .card p {
     font-size: 16px;
-    color: var(--primary);  /* Paragraph font color black */
+    color: black;  /* Paragraph font color black */
 }
 
 /* Hover effects */
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(29 ,53, 87, 0.15);
-    border: 1px solid var(--highlight);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--highlight);
 }
 
 .card h3 {
@@ -300,11 +297,11 @@ h2:hover::after {
 /* ===== FORM INPUTS ===== */
 .contact-form input,
 .contact-form textarea {
-    background: #FAFAFA; /* Very light elegant gray */
+    background: var(--secondary);
     border: 1px solid #2C3E50;
     padding: 12px 20px;
     border-radius: 6px;
-    color: black;
+    color: black;  /* Input text color set to black */
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
@@ -312,7 +309,6 @@ h2:hover::after {
 }
 
 /* ===== BUTTON STYLING ===== */
-
 /* ===== BUTTON STYLING ===== */
 .contact-form button {
     background: var(--highlight);
@@ -340,9 +336,8 @@ h2:hover::after {
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: var(--highlight);
-    box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.3);
+    box-shadow: 0 0 0 2px rgba(163, 194, 228, 0.3);
     outline: none;
-
 }
 
 .profile-pic {
@@ -361,15 +356,7 @@ h2:hover::after {
  #home .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
-
-
-
-
-
-
 
 
 
