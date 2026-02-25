@@ -37,7 +37,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: relative;
     width: 100%;
     max-width: 1200px;
     padding: 20px 40px;
@@ -357,6 +357,7 @@ h2:hover::after {
     display: flex;
     flex-direction: column;
 }
+
 
 
 
