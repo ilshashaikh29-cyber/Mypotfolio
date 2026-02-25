@@ -200,7 +200,7 @@ h2:hover::after {
 }
 
 .card {
-    background: #E3F2FD; /* Elegant soft blue */
+    background: #F5F5F5; /* Elegant soft light gray */
     padding: 30px;
     border-radius: 10px;
     width: 250px;
@@ -340,3 +340,4 @@ h2:hover::after {
     outline: none;
 
 }
+
