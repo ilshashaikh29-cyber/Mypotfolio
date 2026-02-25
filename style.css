@@ -174,7 +174,8 @@ h2:hover::after {
 }
  
 .skils-list li {
-    background: #1e293b;
+    background: var(-- secondary);
+    color:var(--accent);
     padding: 5px 10px;
     border-radius: 25px;
     transition: 0.3s ease;
@@ -182,7 +183,7 @@ h2:hover::after {
 }
 
 .skils-list li:hover {
-    background: #38bdf8;
+    background: var(--primary);
     color: #0f172a;
     transform: translateY(-5px);
 }
@@ -359,6 +360,7 @@ h2:hover::after {
     flex-direction: column;
     align-items: center;
 }
+
 
 
 
