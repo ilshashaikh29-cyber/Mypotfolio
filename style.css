@@ -71,6 +71,16 @@ nav a::after {
     transition: width 0.3s ease;
 }
 
+/* ===== NAV CONTAINER FIX ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;     /* Ek hi line me rakhega */
+    overflow-x: auto;      /* Space kam ho to scroll karega */
+}
+
 nav a:hover {
     background-color: var(--highlight);
     color: var(--primary);
@@ -345,80 +355,7 @@ h2:hover::after {
 }
 
 
-/* ============================= */
-/* 📱 MOBILE RESPONSIVE DESIGN  */
-/* ============================= */
 
-@media (max-width: 768px) {
-
-    /* Header */
-    header {
-        flex-direction: column;
-        padding: 15px 20px;
-        text-align: center;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav a {
-        display: block;
-        margin: 8px 0;
-        font-size: 16px;
-    }
-
-    /* Hero Section */
-    #hero {
-        padding: 60px 15px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    /* Skills Section */
-    .skils-list {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .skils-list li {
-        width: 80%;
-        text-align: center;
-    }
-
-    /* Project Cards */
-    .project-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    /* Contact Form */
-    .contact-form input,
-    .contact-form textarea {
-        width: 90%;
-    }
-
-    .contact-form button {
-        width: 60%;
-    }
-
-    /* Profile Image */
-    .profile-pic {
-        width: 140px;
-        height: 140px;
-    }
-}
 
 
 
