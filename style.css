@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 :root {
   --bg: #111827;
   --section-bg: #1f2937;
@@ -48,12 +50,11 @@ nav a {
   margin-left: 25px;
   font-weight: 500;
   position: relative;
-  padding: 6px 0;
   transition: 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--text);
 }
 
 nav a::after {
@@ -64,7 +65,7 @@ nav a::after {
   width: 0%;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transition: 0.3s ease;
 }
 
 nav a:hover::after {
@@ -141,12 +142,16 @@ h2 {
 }
 
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--section-bg);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-color: var(--accent);
+  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -184,11 +189,18 @@ h2 {
 }
 
 .contact-form button {
-  transition: transform 0.2s ease, background 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .contact-form button:hover {
-  transform: translateY(-2px);
+  background: var(--accent-hover);
 }
 
 /* ===== Mobile ===== */
@@ -217,25 +229,3 @@ h2 {
     font-size: 20px;
   }
 }
-
-/* ===== Smooth Section Fade In ===== */
-
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-section:nth-child(1) { animation-delay: 0.2s; }
-section:nth-child(2) { animation-delay: 0.4s; }
-section:nth-child(3) { animation-delay: 0.6s; }
-section:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
