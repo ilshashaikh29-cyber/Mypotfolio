@@ -178,7 +178,7 @@ h2:hover::after {
     background: var(--secondary);
     padding: 15px 30px;
     border-radius: 50px;
-    color: var(--accent);
+    color: var(--secondary);
     font-weight: 600;
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
     cursor: pointer;
@@ -357,6 +357,7 @@ h2:hover::after {
     display: flex;
     flex-direction: column;
 }
+
 
 
 
