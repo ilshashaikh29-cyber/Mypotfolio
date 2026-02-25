@@ -200,7 +200,7 @@ h2:hover::after {
 }
 
 .card {
-    background: var(--secondary);
+    background: #E3F2FD; /* Elegant soft blue */
     padding: 30px;
     border-radius: 10px;
     width: 250px;
@@ -208,7 +208,7 @@ h2:hover::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    color: black; /* Set the font color of the text to black */
+    color: black;
     border: 1px solid transparent;
 }
 
@@ -338,4 +338,5 @@ h2:hover::after {
     border-color: var(--highlight);
     box-shadow: 0 0 0 2px rgba(163, 194, 228, 0.3);
     outline: none;
+
 }
